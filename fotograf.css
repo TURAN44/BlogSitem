@@ -1,0 +1,31 @@
+main{
+    margin: 0 auto;
+}
+h1{
+    margin: 0;
+    padding-top: 3em;
+    text-align: center;
+    color: var(--dark);
+}
+.image-gallery{
+    list-style: none;
+}
+.image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding-left: 0;
+}
+.image-gallery>li{
+    flex-basis: 20em;
+}
+.image-gallery li img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.image-gallery img:hover{
+    transform: scale(95%);
+    transition: .5s;
+}

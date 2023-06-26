@@ -1,0 +1,321 @@
+:root{
+    --dark: #343f56;
+    --orange: #eb5c2d;
+    --black: #2a2a2a;
+    --light: #f8f5f1;
+}
+html{
+    scroll-behavior: smooth;
+}
+.clear{
+    clear:both;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 68.75%;
+}
+/*Header*/
+#main-header{
+    display: block;
+    background-color: var(--dark);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+#main-nav{
+    display: inline-block;
+    width: calc(100% - 100px);
+    text-align: right;
+}
+
+.main-nav-items{
+    list-style: none;
+    
+}
+.main-nav-item{
+    display: inline-block;
+    margin: 0 1em;
+    font-size: 1em;
+}
+.main-nav-item:last-child{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    .main-nav-item{
+        display: none;
+    }
+    .main-nav-item:last-child{
+        display: block;
+    }
+}
+.main-header-logo{
+    text-decoration: none;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+.main-nav-item a{
+    text-decoration: none;
+    color: var(--light);
+}
+.main-nav-item a:hover{
+    color: var(--orange);
+    transition:.6s;
+}
+#blog-nav-items{
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    padding: 1em;
+    margin-left: 0;
+    background-color: var(--dark);
+    opacity:0;
+    visibility: hidden;
+    transition:300ms;
+}
+#main-nav > ul > li:hover #blog-nav-items{
+    opacity: 1;
+    visibility: visible;
+    transition: 300ms;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        padding: 0 10px;
+    }
+    body{
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container{
+        width: 95%;
+        margin: 0 auto;
+    }
+    body{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    body{
+        font-size: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container{
+        width: 85%;
+        margin: 0 auto;
+    }
+    body{
+        font-size: 95%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    body{
+        font-size: 100%;
+    }
+}
+/*Main*/
+/*Bölüm 1: Karşılama*/
+#karsilama{
+    height: 60vh;
+    width: 100%;
+    padding-top: 15em;
+    background-image: url('/img/slider1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--orange);
+    background-blend-mode: multiply;
+}
+@media screen and (min-width:768px){
+    #karsilama{
+        height: 70;
+    }
+}
+@media screen and (min-width:992px){
+    #karsilama{
+        height: 80;
+        }
+}
+
+.content{
+    color:var(--light);
+    font-size: 1em;
+    text-shadow: 0px 2px 20px #000;
+}
+.content h1{
+    color: var(--light);
+    font-size: 2em;
+    margin: 0;
+}
+/*Bölüm 2 : Günün Sözü */
+#gununSozu{
+    text-align: center;
+    background-color: var(--dark);
+    padding: 1em;
+    color: var(--light);
+}
+#gununSozu h2{
+    color: var(--orange);
+}
+#gununSozu p::before{
+    content:'\275D';
+    color: var(--orange);
+    font-size: larger;
+}
+#gununSozu p::after{
+    content:'\275E';
+    color: var(--orange);
+    font-size: larger;
+}
+#gununSozu p{
+    font-style: italic;
+}
+/*Bölüm 3 : Kartlar */
+.card{
+    width: 100%;
+    margin: 0.5em auto;
+    float: left;
+    padding: .5em;
+    text-align: center;
+}
+@media only screen and (min-width:600px){
+    .card{
+        width: 33.3%;
+    }
+}
+.card i{
+    font-size: 2em;
+    color: var(--orange);
+}
+.innercard{
+    background: var(--light);
+    border-radius: .5em;
+    padding: 2em;
+}
+.innercard:hover{
+    transition: .6s;
+    box-shadow: 0px 2px 15px var(--orange);
+}
+.btn{
+    background-color: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+}
+.btn:hover{
+    border: 1px solid var(--orange);
+    background-color: white;
+    color: var(--orange);
+}
+/*Bölüm 4 : Blog İçerikleri */
+#blogPost{
+    margin: 2em auto;
+}
+.blogPost-left{
+    height: 20em;
+    background-image: url(/img/resim1.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    float: left;
+}
+@media only screen and (min-width:600){
+    .blogPost-left , .blogPost-right{
+        width:50%;
+    }
+}
+.blogPost-right{
+    width: 100%;
+    height: 20em;
+    background-color: var(--light);
+    float: left;
+    padding: 2em 1em;
+}
+.blogPost-right a{
+    display: block;
+    text-align: right;
+    color: var(--orange);
+    text-decoration-line: none;
+}
+#main-footer{
+    display: block;
+    padding: 2em 0;
+    background-color: #343f56;
+}
+.row{
+    margin: 0 auto;
+    width: 100%;
+}
+.col-3{
+    width: 100%;
+    float: left;
+}
+@media only screen and (min-width:600px){
+    .col-3{width: 33.33%;
+}
+}
+.footer-content{
+    color: var(--orange);
+    font-size: 1em;
+}
+.footer-content a{
+    text-decoration: none;
+    color: var(--light);
+}
+.footer-content a:hover{
+    color: var(--orange);
+}
+.footer-content i{
+    padding-right:.5em ;
+    font-size: 1.2em;    
+}
+.footer-nav-items{
+    list-style: none;
+}
+.footer-nav-item ul{
+    list-style: disc;
+    color: var(--orange);
+}
+.footer-content input{
+    width: 100%;
+    height: 2.5em;
+}
+.footer-content button{
+    display: block;
+    float: right;
+}
+#yukari{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#yukari i{
+    color: var(--orange);
+    font-size: 2em;
+}
+#yukari i:hover{
+    transition: 1s;
+    transform: scale(120%);
+}
